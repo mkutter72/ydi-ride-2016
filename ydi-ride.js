@@ -14,7 +14,7 @@ var currentDonationMode = "Credit Card";
   };
 
 var ajaxapi = {
-   url: 'https://nameless-depths-58511.herokuapp.com/',
+   url: 'https://nameless-depths-58511.herokuapp.com',
    // url:'http://localhost:3000',
   ajax: function(config, cb) {
     $.ajax(config).done(function(data, textStatus, jqxhr) {
