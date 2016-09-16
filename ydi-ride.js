@@ -1,6 +1,7 @@
 'use strict';
 
 var currentDonationMode = "Credit Card";
+var goal = 5000;
 
 
  var callback =  function callback(error, data) {
@@ -11,6 +12,22 @@ var currentDonationMode = "Credit Card";
     }
 
     $('#result').val(JSON.stringify(data, null, 4));
+  };
+
+ var callbackAmount =  function callback(error, data) {
+    if (error) {
+
+      $('#result').val('status: ' + error.status + ', error: ' +error.error);
+      return;
+    }
+
+    $('#result').val(JSON.stringify(data, null, 4));
+
+    $("strong.total").text("$" + data);
+    var heightValue = (data / goal) * 100;
+    var heightString = heightValue + "%";
+    $(".amount").css("height",heightString);
+    $(".total").css("bottom",heightString);
   };
 
 var ajaxapi = {
@@ -34,6 +51,12 @@ var ajaxapi = {
     }, callback);
   },
 
+  getDonorTotal: function (callback) {
+    this.ajax({
+      method: 'GET',
+      url: this.url + '/donor',
+    }, callback);
+  },
 };
 
 
@@ -42,11 +65,6 @@ $(document).ready(function () {
 
 $('#registerButton').on('click',function (e){
     e.preventDefault();
-
-    $(".amount").css("height","75%");
-    $(".total").css("bottom","75%");
-    $("strong.total").text("$5,000")
-
 
     var donorData = {
       "name": $('#regInputName').val(),
@@ -78,5 +96,11 @@ $(function() {
     document.getElementById("dropdownMenu1").innerHTML = newButtonText;
 
   });
+
+  $("strong.total").text("$0");
+  $(".amount").css("height","0%");
+  $(".total").css("bottom","0%");
+
+  ajaxapi.getDonorTotal(callbackAmount);
 
  });

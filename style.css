@@ -2,7 +2,10 @@
 
 html body {
     background-color: lightblue;
+}
 
+body {
+  min-width: 1100px;
 }
 
 h2 {
