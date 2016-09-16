@@ -82,20 +82,16 @@ $('#registerButton').on('click',function (e){
 
     $("#allInputs").hide();
     $(".donation-meter").hide();
-
+    $(".bikePic").css("top","32px");
+    $(".bikePic").css("left","627px");
 
     if (currentDonationMode === "Credit Card"){
         $("#continueButton").show();
-        $(".bikePic").css("top","52px");
-        $(".bikePic").css("left","575px");
+
     } else if (currentDonationMode === "Check") {
       $('.infoText').text("Thank-you for donating to the ride.  Please make your check out to Trinity Boston Foundation. Write For YDI Ride in the memo field. You can mail your donation check to me.   If you need my address or have any questions you Your donation is tax deductible.");
-      $(".bikePic").css("top","-80px");
-      $(".bikePic").css("left","600px");
     } else {
       $('.infoText').text("Thank-you for donating to the ride.  When you make your request through your giving fund make the donation to Trinity Boston Foundation. Be sure to indicate that your donation is for the YDI Ride so that the Yoga Diversity Initiative is credited with your donation. Your donation is tax deductible.");
-      $(".bikePic").css("top","-80px");
-      $(".bikePic").css("left","600px");
       };
 
     $(".infoText").show();
