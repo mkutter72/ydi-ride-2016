@@ -64,9 +64,9 @@ $(document).ready(function () {
 
 $('#registerButton').on('click',function (e){
 
-    if ($('#regInputName').val() === "" || $('#regInputEmail').val() === "" ||
-        $('#regDonorAmount').val() === "" || ($('#regInputEmail').val().indexOf("@") === -1))
-      return;
+    // if ($('#regInputName').val() === "" || $('#regInputEmail').val() === "" ||
+    //     $('#regDonorAmount').val() === "" || ($('#regInputEmail').val().indexOf("@") === -1))
+    //   return;
 
     e.preventDefault();
 
@@ -86,8 +86,8 @@ $('#registerButton').on('click',function (e){
 
     if (currentDonationMode === "Credit Card"){
         $("#continueButton").show();
-        $(".bikePic").css("top","-80px");
-        $(".bikePic").css("left","240px");
+        $(".bikePic").css("top","52px");
+        $(".bikePic").css("left","575px");
     } else if (currentDonationMode === "Check") {
       $('.infoText').text("Thank-you for donating to the ride.  Please make your check out to Trinity Boston Foundation. Write For YDI Ride in the memo field. You can mail your donation check to me.   If you need my address or have any questions you Your donation is tax deductible.");
       $(".bikePic").css("top","-80px");

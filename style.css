@@ -35,7 +35,7 @@ min-height: 50px;
 #allInputs {
     position: relative;
     right : -20px;
-    top : 40px;
+    top : 80px;
 }
 
 #pmDropDown{
@@ -93,7 +93,7 @@ min-height: 50px;
   position: relative;
  /*   left: 575px;*/
     left : 50%;
-    top : -730px;
+    top : -750px;
 }
 
 
@@ -101,8 +101,8 @@ min-height: 50px;
   max-width: 330px;
   display: none;
   position: relative;
-  top: 0px;
-  left: 30px;
+  top: -260px;
+  left: 50px;
 }
 
 
@@ -111,6 +111,6 @@ min-height: 50px;
   font-size: 20px;
   max-width: 500px;
   position: relative;
-  top: 40px;
+  top: -300px;
   left: 30px;
 }
