@@ -19,8 +19,8 @@ $.ajax(settings).done(function (response) {
   };
 
 var ajaxapi = {
-   //ttt: 'https://powerful-earth-3914.herokuapp.com/',
-   url:'http://localhost:3000',
+   url: 'https://nameless-depths-58511.herokuapp.com/',
+   // url:'http://localhost:3000',
   ajax: function(config, cb) {
     $.ajax(config).done(function(data, textStatus, jqxhr) {
       cb(null, data);
