@@ -62,8 +62,12 @@ var ajaxapi = {
 
 $(document).ready(function () {
 
-
 $('#registerButton').on('click',function (e){
+
+    if ($('#regInputName').val() === "" || $('#regInputEmail').val() === "" ||
+        $('#regDonorAmount').val() === "" || ($('#regInputEmail').val().indexOf("@") === -1))
+      return;
+
     e.preventDefault();
 
     var donorData = {
@@ -74,20 +78,42 @@ $('#registerButton').on('click',function (e){
       };
 
     ajaxapi.createDonor(donorData,callback);
-    //window.location.href = "https://www.trinityinspires.org/donate/";
+
+
+    $("#allInputs").hide();
+    $(".donation-meter").hide();
+
+
+    if (currentDonationMode === "Credit Card"){
+        $("#continueButton").show();
+        $(".bikePic").css("top","-80px");
+        $(".bikePic").css("left","240px");
+    } else if (currentDonationMode === "Check") {
+      $('.infoText').text("Thank-you for donating to the ride.  Please make your check out to Trinity Boston Foundation. Write For YDI Ride in the memo field. You can mail your donation check to me.   If you need my address or have any questions you Your donation is tax deductible.");
+      $(".bikePic").css("top","-80px");
+      $(".bikePic").css("left","600px");
+    } else {
+      $('.infoText').text("Thank-you for donating to the ride.  When you make your request through your giving fund make the donation to Trinity Boston Foundation. Be sure to indicate that your donation is for the YDI Ride so that the Yoga Diversity Initiative is credited with your donation. Your donation is tax deductible.");
+      $(".bikePic").css("top","-80px");
+      $(".bikePic").css("left","600px");
+      };
+
+    $(".infoText").show();
   });
 
-});
-
-$(function() {
+  $(function() {
     $.ajaxSetup({
        xhrFields: {
          withCredentials: false
-    }
+        }
+      })
     });
 
 
-
+  $('#continueButton').on('click',function (e){
+    e.preventDefault();
+    window.location.href = "https://www.trinityinspires.org/donate/";
+    });
 
   $("#mMethodDropDown").on("click", "li", function(e){
     e.preventDefault();

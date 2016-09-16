@@ -95,3 +95,22 @@ min-height: 50px;
     left : 50%;
     top : -730px;
 }
+
+
+#continueButton {
+  max-width: 330px;
+  display: none;
+  position: relative;
+  top: 0px;
+  left: 30px;
+}
+
+
+.infoText {
+  display: none;
+  font-size: 20px;
+  max-width: 500px;
+  position: relative;
+  top: 40px;
+  left: 30px;
+}
