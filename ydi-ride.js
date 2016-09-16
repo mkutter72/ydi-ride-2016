@@ -2,11 +2,6 @@
 
 var currentDonationMode = "Credit Card";
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
-
-};
 
  var callback =  function callback(error, data) {
     if (error) {
