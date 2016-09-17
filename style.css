@@ -101,19 +101,19 @@ min-height: 50px;
 
 
 #continueButton {
-  max-width: 330px;
+  max-width: 300px;
   display: none;
   position: relative;
-  top: -260px;
-  left: 50px;
+  top: -400px;
+  left: 115px;
 }
 
 
 .infoText {
   display: none;
-  font-size: 20px;
-  max-width: 500px;
+  font-size: 22px;
+  max-width: 540px;
   position: relative;
-  top: -300px;
+  top: -450px;
   left: 30px;
 }

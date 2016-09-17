@@ -1,7 +1,7 @@
 'use strict';
 
 var currentDonationMode = "Credit Card";
-var goal = 5000;
+var goal = 6000;
 
 
  var callback =  function callback(error, data) {
@@ -89,9 +89,11 @@ $('#registerButton').on('click',function (e){
         $("#continueButton").show();
 
     } else if (currentDonationMode === "Check") {
-      $('.infoText').text("Thank-you for donating to the ride.  Please make your check out to Trinity Boston Foundation. Write For YDI Ride in the memo field. You can mail your donation check to me.   If you need my address or have any questions you Your donation is tax deductible.");
+      $(".infoText").empty();
+      $('.infoText').append("Thank-you for donating to the ride.  Please make your check out to Trinity Boston Foundation. Write \"For YDI Ride\" in the memo field. You can mail your donation check to me. <br><br>Your donation is tax deductible.  If you need my address or have any questions you can contact me at ydiride@gmail.com");
     } else {
-      $('.infoText').text("Thank-you for donating to the ride.  When you make your request through your giving fund make the donation to Trinity Boston Foundation. Be sure to indicate that your donation is for the YDI Ride so that the Yoga Diversity Initiative is credited with your donation. Your donation is tax deductible.");
+      $(".infoText").empty();
+      $('.infoText').append("Thank-you for donating to the ride.  When you make your request through your giving fund make the donation to Trinity Boston Foundation. <br><br> <b>IMPORTANT: Be sure to designate that your donation is for the YDI Ride so that the Yoga Diversity Initiative is credited with your donation. </b> <br><br>Your donation is tax deductible. If have any questions you can contact me at ydiride@gmail.com");
       };
 
     $(".infoText").show();
