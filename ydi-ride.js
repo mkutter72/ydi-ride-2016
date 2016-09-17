@@ -1,7 +1,7 @@
 'use strict';
 
 var currentDonationMode = "Credit Card";
-var goal = 6000;
+var goal = 5000;
 
 
  var callback =  function callback(error, data) {
@@ -26,8 +26,16 @@ var goal = 6000;
     $("strong.total").text("$" + data);
     var heightValue = (data / goal) * 100;
     var heightString = heightValue + "%";
-    $(".amount").css("height",heightString);
-    $(".total").css("bottom",heightString);
+
+    if (heightValue > 90)
+      $(".total").css("bottom","90%");
+    else
+      $(".total").css("bottom",heightString);
+
+    if (heightValue > 97)
+      $(".amount").css("height","97%");
+    else
+      $(".amount").css("height",heightString);
   };
 
 var ajaxapi = {
@@ -64,9 +72,9 @@ $(document).ready(function () {
 
 $('#registerButton').on('click',function (e){
 
-    // if ($('#regInputName').val() === "" || $('#regInputEmail').val() === "" ||
-    //     $('#regDonorAmount').val() === "" || ($('#regInputEmail').val().indexOf("@") === -1))
-    //   return;
+    if ($('#regInputName').val() === "" || $('#regInputEmail').val() === "" ||
+        $('#regDonorAmount').val() === "" || ($('#regInputEmail').val().indexOf("@") === -1))
+      return;
 
     e.preventDefault();
 
