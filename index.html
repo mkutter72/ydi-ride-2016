@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 <h2 >Welcome to Mike Kutter's YDI Ride Donation Website!</h2>
 
  <div class="container" id="allInputs">
-      <form class="form-register" >
+      <form class="form-register" autocomplete="off">
         <h3 class="form-register-heading" id="buttonTitle">Donation Information</h3>
 
         <!-- <label for="regInputName" class="sr-only">Name</label> -->
@@ -27,7 +26,7 @@
 
         <div class="input-group">
           <span class="input-group-addon">$</span>
-          <input type="text" class="form-control" placeholder="Amount" id="regDonorAmount" required autocomplete="off">
+          <input type="text" class="form-control" placeholder="Amount" id="regDonorAmount" required >
         </div>
 
         <label id="paymentMethod" >Payment Method</label>
