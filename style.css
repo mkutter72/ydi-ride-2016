@@ -33,6 +33,7 @@ min-height: 50px;
 }
 
 #allInputs {
+   display: none;
     position: relative;
     right : -20px;
     top : 80px;
@@ -95,8 +96,8 @@ min-height: 50px;
 .bikePic {
   position: relative;
  /*   left: 575px;*/
-    left : 50%;
-    top : -750px;
+    left : 627px;
+    top : 40px;
 }
 
 
@@ -110,10 +111,27 @@ min-height: 50px;
 
 
 .infoText {
-  display: none;
-  font-size: 22px;
+  /*font-size: 22px;*/
+  font-size: 18px;
   max-width: 540px;
   position: relative;
   top: -450px;
   left: 30px;
 }
+
+
+#websiteButton {
+  position: relative;
+  top: -399px;
+  left: 280px;
+  max-width: 210px;
+}
+
+#donateButton {
+  position: relative;
+  top: -450px;
+  left: 60px;
+  max-width: 210px;
+}
+
+

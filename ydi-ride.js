@@ -90,7 +90,7 @@ $('#registerButton').on('click',function (e){
 
     $("#allInputs").hide();
     $(".donation-meter").hide();
-    $(".bikePic").css("top","32px");
+    $(".bikePic").css("top","40px");
     $(".bikePic").css("left","627px");
 
     if (currentDonationMode === "Credit Card"){
@@ -119,6 +119,22 @@ $('#registerButton').on('click',function (e){
   $('#continueButton').on('click',function (e){
     e.preventDefault();
     window.location.href = "https://www.trinityinspires.org/donate/";
+    });
+
+   $('#websiteButton').on('click',function (e){
+    e.preventDefault();
+    window.location.href = "http://www.yogadiversityinitiative.org";
+    });
+
+    $('#donateButton').on('click',function (e){
+    e.preventDefault();
+    $(".infoText").hide();
+    $("#websiteButton").hide();
+    $("#donateButton").hide();
+    $('#allInputs').show();
+    $('.donation-meter').show();
+    $(".bikePic").css("top","-742px");
+    $(".bikePic").css("left","627px");
     });
 
   $("#mMethodDropDown").on("click", "li", function(e){
