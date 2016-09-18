@@ -1,7 +1,7 @@
 
 
 html body {
-    background-color: lightblue;
+    background-color: #d9d9d9;
 }
 
 body {
@@ -95,9 +95,11 @@ min-height: 50px;
 
 .bikePic {
   position: relative;
- /*   left: 575px;*/
-    left : 627px;
-    top : 40px;
+  left : 627px;
+  top : 40px;
+  border-width:5px;
+  border-style:solid;
+  /*border-color: #194d19;*/
 }
 
 
@@ -135,3 +137,6 @@ min-height: 50px;
 }
 
 
+#websiteButton, #donateButton, #continueButton, #registerButton, #dropdownMenu1   {
+  background-color: #6d95c5;
+}
