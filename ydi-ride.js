@@ -69,6 +69,7 @@ var ajaxapi = {
 
 
 $(document).ready(function () {
+  // do this first
   ajaxapi.getDonorTotal(callbackAmount);
 
   $('#registerButton').on('click',function (e){
