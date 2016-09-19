@@ -69,8 +69,9 @@ var ajaxapi = {
 
 
 $(document).ready(function () {
+  ajaxapi.getDonorTotal(callbackAmount);
 
-$('#registerButton').on('click',function (e){
+  $('#registerButton').on('click',function (e){
 
     if ($('#regInputName').val() === "" || $('#regInputEmail').val() === "" ||
         $('#regDonorAmount').val() === "" || ($('#regInputEmail').val().indexOf("@") === -1))
@@ -146,11 +147,5 @@ $('#registerButton').on('click',function (e){
     document.getElementById("dropdownMenu1").innerHTML = newButtonText;
 
   });
-
-  $("strong.total").text("$0");
-  $(".amount").css("height","0%");
-  $(".total").css("bottom","0%");
-
-  ajaxapi.getDonorTotal(callbackAmount);
 
  });
